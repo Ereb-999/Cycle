@@ -46,7 +46,77 @@ public class Main {
         }
 
 
+        int deposition = 15_000;
+        int total = 0;
+        int month = 0;
+        while (total < 2_450_000) {
+            total = total + total/100;
+            total = total + deposition;
+            month = month + 1;
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей");
+        }
+
+        int number = 0;
+        while (number < 10) {
+            number = number + 1;
+            System.out.print(number + " ");
+        }
+        System.out.println();
+        for (number = 10; number >=1; number = number - 1) {
+            System.out.print(number + " ");
+        }
+
+        int Y = 12_000_000;
+        int birth;
+        int mortality;
+        for (int i = 0; i <= 10; i++) {
+            birth = (Y / 1000) * 17;
+            mortality = (Y / 1000) * 8;
+            Y = (Y + birth) - mortality;
+            System.out.println("Год " + i + ", численность населения составляет " + Y);
+        }
+
+        int contribution = 15_000;
+        int score = 0;
+        int month1 = 0;
+        do {
+            month1 = month1 + 1;
+            score = score + ((score * 7) / 100);
+            score = score + contribution;
+            if (month1 %6 == 0){
+            System.out.println("Месяц: " + month1 + ", нынешняя сумма на накопительном счёте " + score);
+        }
+        }
+        while (score < 12_000_000);
+
+        do {
+            month1 = month1 + 1;
+            score = score + ((score * 7) / 100);
+            score = score + contribution;
+            if (month1 %6 == 0){
+                System.out.println("Месяц: " + month1 + ", нынешняя сумма на накопительном счёте " + score);
+            }
+        }
+        while (month1 < 108);
+
+        int friday = 2;
+        int day = 0;
+        do {
+            friday= friday + 1;
+            day = day + 1;
+            if (day %7 == 0){
+                System.out.println(friday);
+            }
+        }
+        while (day < 31);
 
 
+        int years = 1817;
+        int yearsPresent = 2054;
+        while (years < yearsPresent) {
+            years = years + 79;
+            System.out.println(years);
+        }
+                
     }
 }
