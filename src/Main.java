@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-       for (int q = 1; q <= 10; q++)
-           System.out.println(q);
+        for (int q = 1; q <= 10; q++)
+            System.out.println(q);
 
         for (int w = 10; w >= 1; w--)
             System.out.println(w);
@@ -13,7 +13,7 @@ public class Main {
             System.out.println(r);
 
         for (int a = 1904; a <= 2096; a = a + 4)
-            System.out.println( a + " год являеться високостным.");
+            System.out.println(a + " год являеться високостным.");
 
         for (int s = 7; s <= 98; s = s + 7)
             System.out.println(s);
@@ -31,18 +31,16 @@ public class Main {
 
         int salary2 = 29000;
         int total2 = 0;
-        for (int i = 1; i <= 12; i++)
-        {
+        for (int i = 1; i <= 12; i++) {
             total2 = total2 + total2 / 100;
             total2 = total2 + salary2;
             System.out.println("Месяц " + i + ": сумма накоплений равна  " + total1 + " рублей.");
         }
 
         int figure;
-        for (int i = 1; i <= 10; i++)
-        {
+        for (int i = 1; i <= 10; i++) {
             figure = i * 2;
-        System.out.println("2 * " + i + " = " + figure);
+            System.out.println("2 * " + i + " = " + figure);
         }
 
 
@@ -50,7 +48,7 @@ public class Main {
         int total = 0;
         int month = 0;
         while (total < 2_450_000) {
-            total = total + total/100;
+            total = total + total / 100;
             total = total + deposition;
             month = month + 1;
             System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей");
@@ -62,7 +60,7 @@ public class Main {
             System.out.print(number + " ");
         }
         System.out.println();
-        for (number = 10; number >=1; number = number - 1) {
+        for (number = 10; number >= 1; number = number - 1) {
             System.out.print(number + " ");
         }
 
@@ -83,9 +81,9 @@ public class Main {
             month1 = month1 + 1;
             score = score + ((score * 7) / 100);
             score = score + contribution;
-            if (month1 %6 == 0){
-            System.out.println("Месяц: " + month1 + ", нынешняя сумма на накопительном счёте " + score);
-        }
+            if (month1 % 6 == 0) {
+                System.out.println("Месяц: " + month1 + ", нынешняя сумма на накопительном счёте " + score);
+            }
         }
         while (score < 12_000_000);
 
@@ -93,30 +91,26 @@ public class Main {
             month1 = month1 + 1;
             score = score + ((score * 7) / 100);
             score = score + contribution;
-            if (month1 %6 == 0){
+            if (month1 % 6 == 0) {
                 System.out.println("Месяц: " + month1 + ", нынешняя сумма на накопительном счёте " + score);
             }
         }
         while (month1 < 108);
 
         int friday = 2;
-        int day = 0;
-        do {
-            friday= friday + 1;
-            day = day + 1;
-            if (day %7 == 0){
-                System.out.println(friday);
+        for (int day = friday; day <= 31; day += 7) {
+            System.out.println("Сегодня пятница, " + day + "-е число. Необходимо подготовить отчет");
+        }
+
+
+        int years = 2023;
+        int past = years - 200;
+        int future = years + 100;
+        for (int i = past; i < future; i++) {
+            if (i % 79 == 0) {
+                System.out.println(i);
             }
         }
-        while (day < 31);
-
-
-        int years = 1817;
-        int yearsPresent = 2054;
-        while (years < yearsPresent) {
-            years = years + 79;
-            System.out.println(years);
-        }
-                
     }
+
 }
